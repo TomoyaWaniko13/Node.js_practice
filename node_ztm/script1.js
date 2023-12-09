@@ -161,22 +161,6 @@
 //     .catch(err => console.log(err))
 //     .finally(data => console.log("extra", data));
 
-// const urls = [
-//     "https://jsonplaceholder.typicode.com/users",
-//     "https://jsonplaceholder.typicode.com/posts"
-// ]
-//
-// const getData = async function () {
-//     const [users, posts] =
-//         await Promise.all(urls.map(
-//             async function (url) {
-//                 const response = await fetch(url);
-//                 return response.json();
-//             }))
-//     console.log(users);
-//     console.log(posts);
-// };
-
 
 // const getData2 = async function () {
 //     const arrayOfPromises = urls.map(url => fetch(url));
@@ -188,3 +172,91 @@
 //
 // getData2();
 
+// const basket = ["apples", "oranges", "grapes"];
+
+// for (let i = 0; i < basket.length; i++) {
+//     console.log(basket[i]);
+// }
+
+// basket.forEach(item => {
+//     console.log(item);
+// })
+
+// for (const item of basket) {
+//     console.log(item);
+// }
+
+// const basket = ["apples", "oranges", "grapes"];
+//
+// const detailedBasket = {
+//     apples: 5,
+//     orange: 10,
+//     grapes: 10000
+// };
+//
+// const basket = {
+//     0: "apples",
+//     1: "oranges",
+//     2: "grapes"
+// };
+//
+// for (const item of basket) {
+//     console.log(item);
+// }
+//
+// for (const item in detailedBasket) {
+//     console.log(item);
+// }
+//
+// for (const basketKey in basket) {
+//     console.log(basketKey);
+// }
+
+// const object = {
+//     a: 1,
+//     b: 2,
+//     c: 3
+// }
+//
+// for (const objectKey in object) {
+//     console.log(objectKey);
+// }
+//
+
+// console.log(Number.MAX_SAFE_INTEGER);
+
+// let myPokemon = {
+//     raichu: {
+//         species: "mouse Pokemon",
+//         height: 0.8,
+//         weight: 50
+//     }
+// }
+//
+// let weight3 = myPokemon?.pikachu?.height;
+// console.log(weight3);
+//
+// if (myPokemon.pikachu && myPokemon.pikachu.weight) {
+//     let weight2 = myPokemon.pikachu.weight;
+//     console.log(weight2);
+// } else {
+//     let weight2 = undefined;
+//     console.log(weight2);
+// }
+
+// const array = [100, 3225143550, 51500, 123];
+// array.at(-2);
+
+// const array = [100, 200, 300, 50000, 10];
+// console.log(array.at(2));
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//     .then((r) => r.json())
+//     .then(console.log);
+
+async function fetchPosts() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    console.log(data);
+}
+fetchPosts()
