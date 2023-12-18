@@ -1,6 +1,9 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
+
+app.use()
 
 app.get("/", (req, res) => {
     res.send("getting root");
@@ -17,6 +20,7 @@ app.post("/profile", (req, res) => {
         hobby: "soccer"
     }
     res.send(user);
+
 });
 
 app.listen(3000);
