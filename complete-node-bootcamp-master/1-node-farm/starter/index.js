@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
     if (pathName === "/" || pathName === "/over") {
         res.writeHead(200, {"Content-type": "text/html"})
         const replacedOutput = dataObj.map(el => replaceTemplate(tempCardHTML, el));
-        console.log( replacedOutput);
+        console.log(replacedOutput);
 
 
         //Product page
