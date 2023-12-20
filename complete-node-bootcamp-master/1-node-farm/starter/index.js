@@ -4,7 +4,7 @@ const http = require("http");
 const portNumber = 8000;
 
 const replaceTemplate = (tempCard, productJson) => {
-    let replacedOutput = tempCard.replace(/{%PRODUCTNAME%}/g, productJson.name);
+    let replacedOutput = tempCard.replace(/{%PRODUCTNAME%}/g, productJson.productName);
     replacedOutput = replacedOutput.replace(/{%IMAGE%}/g, productJson.image);
     replacedOutput = replacedOutput.replace(/{%PRICE%}/g, productJson.price);
     replacedOutput = replacedOutput.replace(/{%FROM%}/g, productJson.from);
@@ -31,9 +31,10 @@ const server = http.createServer((req, res) => {
     //Overview page
     if (pathName === "/" || pathName === "/over") {
         res.writeHead(200, {"Content-type": "text/html"})
-        const replacedOutput = dataObj.map(el => replaceTemplate(tempCardHTML, el));
-        console.log(replacedOutput);
 
+        const cardsHTML = dataObj.map(el => replaceTemplate(tempCardHTML, el)).join();
+        const output = tempOverviewHTML.replace(`{%PRODUCT_CARDS%}`, cardsHTML);
+        res.end(output);
 
         //Product page
     } else if (pathName === "/product") {
