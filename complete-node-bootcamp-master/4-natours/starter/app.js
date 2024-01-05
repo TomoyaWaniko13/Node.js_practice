@@ -29,7 +29,10 @@ app.get('/api/v1/tours', (req, res) => {
   });
 });
 
-app.get
+app.get('/api/v1/tours/:id', (req, res) => {
+  console.log(req.params);
+
+});
 
 app.post('/api/v1/tours', (req, res) => {
 
