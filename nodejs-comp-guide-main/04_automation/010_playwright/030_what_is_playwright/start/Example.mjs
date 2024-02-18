@@ -6,9 +6,11 @@ import {chromium} from "@playwright/test";
     await page.goto("http://localhost:3000");
 
 
+    //css
     const pageTitleLocator =  page.locator('.navbar-brand');
     const pageTitle = await pageTitleLocator.innerText();
 
+    //t
     const textLocator = await page.locator('text=名刺管理アプリ');
     const pageText = await textLocator.innerText();
     console.log(pageText);
