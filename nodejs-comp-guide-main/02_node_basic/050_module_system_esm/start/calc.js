@@ -1,4 +1,3 @@
-const plus = (a, b) => a + b;
-const minus = (a, b) => a - b;
+import minus,{plus} from "./example.js";
 
-export {plus, minus};
+console.log(minus(1, 2));
