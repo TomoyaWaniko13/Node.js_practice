@@ -1,10 +1,19 @@
 import {chromium} from "@playwright/test";
 
-const browser = await chromium.launch({headless: false, slowMo:1000});
-const page = await browser.newPage();
-await page.goto("http://localhost:3000");
-const htmlString = await page.content();
+(async () => {
+    const browser = await chromium.launch({headless:false, slowMo: 500});
+    const page = await browser.newPage();
+    await page.goto("http://localhost:3000");
 
-console.log(htmlString);
 
-await browser.close();
+    const pageTitleLocator =  page.locator('.navbar-brand');
+    const pageTitle = await pageTitleLocator.innerText();
+
+    const textLocator = await page.locator('text=名刺管理アプリ');
+    const pageText = await textLocator.innerText();
+    console.log(pageText);
+
+    const xpathLocator = await page.locator('xpath=//*[@id="__next"]/nav/div/a');
+    const xpathText = await xpathLocator.innerText();
+    console.log(xpathText);
+})();
