@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/048_practice/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/048_practice/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/050_write_file/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/050_write_file/start/Example.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +59,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.19",
     "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -117,7 +117,7 @@
       <workItem from="1708218587885" duration="1989000" />
       <workItem from="1708220848288" duration="13000" />
       <workItem from="1708220885402" duration="82000" />
-      <workItem from="1708221010268" duration="23430000" />
+      <workItem from="1708221010268" duration="25730000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708288984587</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708398787940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708398787940</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
