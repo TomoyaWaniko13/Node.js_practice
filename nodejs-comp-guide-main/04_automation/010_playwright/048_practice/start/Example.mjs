@@ -5,21 +5,21 @@
 import {chromium} from "@playwright/test";
 
 (async () => {
-    const browser = await chromium.launch({headless: false, slowMo: 500})
+    const browser = await chromium.launch({headless: false, slowMo: 500});
     const page = await browser.newPage();
-    await page.goto("http://localhost:3000");
+    await page.goto('http://localhost:3000');
 
     const inputLocator = page.locator('//*[@id="__next"]/div/div[1]/label/input');
     await inputLocator.type('佐藤');
 
-    const pageLocator = page.locator('.page-link.page-number >> nth=-1');
-    await pageLocator.count();
-
+    const pageNumberLocator = page.locator('.page-link.page-number');
+    if (await pageNumberLocator.count() > 1) {
+        const lastPageLocator = pageNumberLocator.locator('nth=-1');
+        await lastPageLocator.click();
+    }
 
     const lastCardLocator = page.locator('.cards.list-group-item >> nth=-1');
-    const lastCardName = await lastCardLocator.textContent();
-    console.log(lastCardName);
+    console.log(await lastCardLocator.textContent());
 
-    await browser.close();
 
 })();

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update" />
+    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/048_practice/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/048_practice/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/050_write_file/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/050_write_file/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +56,7 @@
     "Node.js.Example.mjs.executor": "Run",
     "Node.js.calc.js.executor": "Run",
     "Node.js.example.js.executor": "Run",
+    "Node.js.example.mjs.executor": "Run",
     "Node.js.test.cjs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -63,6 +69,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.build-start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -110,7 +117,7 @@
       <workItem from="1708218587885" duration="1989000" />
       <workItem from="1708220848288" duration="13000" />
       <workItem from="1708220885402" duration="82000" />
-      <workItem from="1708221010268" duration="15302000" />
+      <workItem from="1708221010268" duration="23430000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -152,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708269330696</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708282466922</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708282466922</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708288984587</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708288984587</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

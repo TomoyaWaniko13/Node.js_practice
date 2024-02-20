@@ -7,7 +7,9 @@ import * as fs from "fs";
   await page.goto("http://localhost:3000");
 
   const cardLocator = page.locator(".cards.list-group-item >> nth=1");
+  const cardText = await cardLocator.textContent();
 
   await browser.close();
 
+  fs.writeFileSync('./text-data.csv', cardText);
 })();
