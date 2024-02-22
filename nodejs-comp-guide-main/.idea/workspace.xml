@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/end/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/054_write_csv_file/end/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,35 +49,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.Example.mjs.executor": "Run",
-    "Node.js.calc.js.executor": "Run",
-    "Node.js.example.js.executor": "Run",
-    "Node.js.example.mjs.executor": "Run",
-    "Node.js.test.cjs.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.11.0",
-    "javascript.nodejs.core.library.typings.version": "20.11.19",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build-start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.Example.mjs.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.calc.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.mjs.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.cjs.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build-start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JavaScript"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaScript&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -117,7 +117,8 @@
       <workItem from="1708218587885" duration="1989000" />
       <workItem from="1708220848288" duration="13000" />
       <workItem from="1708220885402" duration="82000" />
-      <workItem from="1708221010268" duration="25730000" />
+      <workItem from="1708221010268" duration="33163000" />
+      <workItem from="1708638522105" duration="4153000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -183,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708398787940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708401344954</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708401344954</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708638644323</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708638644323</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
