@@ -9,17 +9,21 @@ import {chromium} from "@playwright/test";
     await page.goto("http://localhost:3000");
 
     const inputLocator = page.locator('//*[@id="__next"]/div/div[1]/label/input');
-    await page.waitForTimeout(1000);
     await inputLocator.type('美');
+    await page.waitForTimeout(2000);
 
-    const thirdPageLocator = page.locator(".page-link.page-number >> nth=2");
-    await page.waitForTimeout(1000);
+    const thirdPageLocator = page.locator('.page-link.page-number >> nth=2');
     await thirdPageLocator.click();
+    await page.waitForTimeout(2000);
 
-    // CSS セレクターで要素を取得
-    const cardLocator = await page.locator(".cards.list-group-item");
-    const cardCount = await cardLocator.count();
-    console.log(cardCount);
+
+    const pageTitleLocator = page.locator('.cards.list-group-item');
+    const parentLocator = pageTitleLocator.locator('..');
+
+    const pageTitle = await parentLocator.innerHTML();
+    console.log(pageTitle);
+
+    await page.waitForTimeout(2000);
 
     await browser.close();
 })();

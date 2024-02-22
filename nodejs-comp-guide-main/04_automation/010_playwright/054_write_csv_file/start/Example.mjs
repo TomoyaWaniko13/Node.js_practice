@@ -1,6 +1,4 @@
 import {chromium} from "@playwright/test";
-import * as fs from "fs";
-import {Parser} from "json2csv";
 
 (async () => {
     const browser = await chromium.launch({headless: false, slowMo: 500})
@@ -10,19 +8,13 @@ import {Parser} from "json2csv";
     const cardsLocator = page.locator('.cards.list-group-item');
     const numberOfCards = await cardsLocator.count();
 
-    const cardsTexts = [];
+    const firstCardLocator =  cardsLocator.locator('nth=0');
+    console.log(await firstCardLocator.textContent());
 
-    for (let i = 0; i < numberOfCards; i++) {
-        const eachCardLocator = cardsLocator.locator(`nth=${i}`);
-        const eachCardText = await eachCardLocator.textContent();
-        cardsTexts.push({
-            name: eachCardText
-        })
-    }
+
+    await firstCardLocator.click();
+
+    await page.waitForTimeout(10000);
+
     await browser.close();
-
-    const parser = new Parser();
-    const csv = parser.parse(cardsTexts);
-    fs.writeFileSync("./text-data.csv", csv);
-
 })();
