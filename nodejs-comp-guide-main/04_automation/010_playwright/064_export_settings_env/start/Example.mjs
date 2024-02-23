@@ -1,48 +1,25 @@
-// import { chromium } from "@playwright/test";
-// import * as fs from "fs";
-// import { Parser } from "json2csv";
-//
-// (async () => {
-//   const browser = await chromium.launch({ headless: false, slowMo: 500 });
-//   const page = await browser.newPage();
-//   await page.goto("http://localhost:3000");
-//
-//   const cardLocators = page.locator(".cards.list-group-item");
-//   const cardCount = await cardLocators.count();
-//
-//   const fetchedCards = [];
-//   for(let i = 0; i < cardCount; i++) {
-//     const cardLocator = cardLocators.locator(`nth=${i} >> a`);
-//     const cardText = await cardLocator.textContent();
-//
-//     await cardLocator.click();
-//     const companyLocator = page.locator('.card-title.company');
-//     const companyText = await companyLocator.textContent();
-//
-//     fetchedCards.push({
-//       company: companyText,
-//       name: cardText
-//     });
-//
-//     const backLocator = page.locator('text=戻る');
-//     await backLocator.click();
-//
-//   }
-//
-//   await browser.close();
-//
-//   const parser = new Parser();
-//   const csv = parser.parse(fetchedCards);
-//
-//   fs.writeFileSync("./text-data.csv", csv);
-// })();
-
-
-import { GoogleSpreadsheet } from "google-spreadsheet";
+import {chromium} from "@playwright/test";
+import * as fs from 'fs';
+import {Parser} from "json2csv";
 import env from 'dotenv';
-env.config();
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const secrets = require('../../../google_secrets.json');
+env.config({path: '../../../.env'});
 
-console.log(process.env.OUTPUT_FILE);
+(async () => {
+  const browser = await chromium.launch({headless: false, slowMo: 200})
+  const page = await browser.newPage();
+  await page.goto(process.env.TARGET_URL);
+
+  const cardsLocator = page.locator('.cards.list-group-item');
+  const cardCount = await cardsLocator.count();
+
+  const fetchedCards = [];
+  for (let i = 0; i < cardCount; i++) {
+    const eachCardLocator = cardsLocator.locator(`nth=${i} >> a`);
+    await eachCardLocator.click();
+
+    const backLocator = page.locator('text=戻る');
+    await backLocator.click();
+
+
+  }
+})();
