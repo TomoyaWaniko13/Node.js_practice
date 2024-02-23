@@ -21,6 +21,9 @@ const secrets = require('../../../google_secrets.json');
         const sheet = doc.sheetsByIndex[0];
         await sheet.loadCells('A1:C4');
 
-        const a1 = sheet.getCellByA1('A1');
+        const a1 = sheet.getCell(0, 0);
+        const b2 = sheet.getCellByA1('B2');
+
         console.log(a1.value);
+        console.log(b2.value);
     })();
