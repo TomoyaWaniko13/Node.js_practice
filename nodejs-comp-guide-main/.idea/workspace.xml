@@ -7,6 +7,12 @@
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/064_export_settings_env/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/064_export_settings_env/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/070_error_handling/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/070_error_handling/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +165,7 @@
       <workItem from="1708638522105" duration="15149000" />
       <workItem from="1708660759581" duration="2111000" />
       <workItem from="1708662904270" duration="202000" />
-      <workItem from="1708663204220" duration="5923000" />
+      <workItem from="1708663204220" duration="16743000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -273,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708709281637</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708711301359</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708711301359</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

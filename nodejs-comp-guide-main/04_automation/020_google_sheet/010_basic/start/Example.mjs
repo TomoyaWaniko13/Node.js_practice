@@ -1,29 +1,37 @@
 import {GoogleSpreadsheet} from "google-spreadsheet";
 import env from "dotenv";
-env.config();
 import {createRequire} from "module";
+env.config({path: '../../../.env'});
 const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
 
+(async () => {
+    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
-    //https://docs.google.com/spreadsheets/d/10xihAYhtdWP5xZObOcqty3_ajzI1dJJoot46A2tVnTY/edit#gid=0
+    await doc.useServiceAccountAuth({
+        client_email: secrets.client_email,
+        private_key: secrets.private_key
+    })
 
-    (async () => {
-        const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
+    await doc.loadInfo();
 
-        await doc.useServiceAccountAuth({
-            client_email: secrets.client_email,
-            private_key: secrets.private_key
-        })
+    const sheet = doc.sheetsByIndex[0];
+    await sheet.loadCells('A1:C5');
 
-        await doc.loadInfo();
+    const a1 = sheet.getCell(0, 0);
+    const a5 = sheet.getCell(4, 0);
+    const b1 = sheet.getCell(0, 1);
+    const b2 = sheet.getCellByA1('B2');
 
-        const sheet = doc.sheetsByIndex[0];
-        await sheet.loadCells('A1:C4');
+    console.log(a5.textFormat);
 
-        const a1 = sheet.getCell(0, 0);
-        const b2 = sheet.getCellByA1('B2');
+    a1.value = 11;
+    b1.value = 92;
+    b1.textFormat = {fontSize: 20, bold:true};
+    a5.value = '=sum(A1:A4)';
 
-        console.log(a1.value);
-        console.log(b2.value);
-    })();
+    await sheet.saveUpdatedCells();
+
+})();
+
+//https://docs.google.com/spreadsheets/d/10xihAYhtdWP5xZObOcqty3_ajzI1dJJoot46A2tVnTY/edit#gid=0
