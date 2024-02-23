@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03_npm/010_intro/start/main.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/03_npm/010_intro/start/main.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_npm/020_dep_vs_devDep/start/main.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/03_npm/020_dep_vs_devDep/start/main.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/end/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/end/Example.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,13 +66,15 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.11.0",
     "javascript.nodejs.core.library.typings.version": "20.11.19",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
+    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/020_google_sheet/010_basic/start",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build-start.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.test.executor": "Run",
     "settings.editor.selected.configurable": "settings.nodejs",
     "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -91,7 +95,11 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/03_npm/020_dep_vs_devDep/start" />
       <recent name="$PROJECT_DIR$/04_automation" />
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet" />
     </key>
@@ -107,9 +115,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/03_npm/040_npm_script/start/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/03_npm/040_npm_script/start/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.build-start" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +157,8 @@
       <workItem from="1708220848288" duration="13000" />
       <workItem from="1708220885402" duration="82000" />
       <workItem from="1708221010268" duration="33163000" />
-      <workItem from="1708638522105" duration="7229000" />
+      <workItem from="1708638522105" duration="15149000" />
+      <workItem from="1708660759581" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -217,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708642971687</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708648395181</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708648395181</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

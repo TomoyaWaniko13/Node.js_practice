@@ -13,7 +13,7 @@ const secrets = require('../../../google_secrets.json');
         client_email: secrets.client_email,
         private_key: secrets.private_key
     });
-    
+
     await doc.loadInfo();
 
     const sheet = doc.sheetsByIndex[0];
@@ -27,3 +27,4 @@ const secrets = require('../../../google_secrets.json');
     console.log('b1', b1.value);
     console.log('b2', b2.value);
 })();
+

@@ -1,9 +1,8 @@
-import _ from "lodash";
+import _ from "lodash/cloneDeep";
 
-const original = { prop: { nested: "value" } };
-// オブジェクトの複製
-
+const original = {prop: {nested: "value"}}
 const cloned = _.cloneDeep(original);
-cloned.prop.nested = "new value";
 
-console.log(original, cloned);
+cloned.prop.nested = 'new value';
+
+console.log(cloned);
