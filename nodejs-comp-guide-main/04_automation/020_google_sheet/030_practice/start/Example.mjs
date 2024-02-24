@@ -1,7 +1,7 @@
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-import env from 'dotenv';
-env.config();
-import { createRequire } from 'module';
+import {GoogleSpreadsheet} from "google-spreadsheet";
+import env from "dotenv";
+import {createRequire} from "module";
+env.config({path: '../../../.env'});
 const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
 
@@ -24,5 +24,13 @@ const secrets = require('../../../google_secrets.json');
   });
 
   await doc.loadInfo();
+
+  const cartSheet = doc.sheetsByTitle['cart'];
+  await cartSheet.addRows([
+    {name: 'Orange', price: 120},
+    {name: 'Banana', price: 50},
+    {name: 'Apple', price: 100},
+    {name: 'Total', price: '=SUM(B2:B4)'}
+  ]);
 
 })();

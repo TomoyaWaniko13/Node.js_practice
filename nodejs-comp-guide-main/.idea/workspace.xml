@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/040_crawl_and_write/start/scraping.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/064_export_settings_env/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/064_export_settings_env/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/010_playwright/070_error_handling/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/010_playwright/070_error_handling/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/030_practice/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/030_practice/start/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +57,7 @@
     "Node.js.example.js.executor": "Run",
     "Node.js.example.mjs.executor": "Run",
     "Node.js.main.mjs.executor": "Run",
+    "Node.js.scraping.mjs.executor": "Run",
     "Node.js.test.cjs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -165,7 +161,7 @@
       <workItem from="1708638522105" duration="15149000" />
       <workItem from="1708660759581" duration="2111000" />
       <workItem from="1708662904270" duration="202000" />
-      <workItem from="1708663204220" duration="16743000" />
+      <workItem from="1708663204220" duration="20977000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -287,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708711301359</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708731350808</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708731350808</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
