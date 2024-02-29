@@ -1,13 +1,11 @@
-import {chromium}   from "@playwright/test";
-import * as fs from 'fs';
+import {chromium} from "@playwright/test";
 import {Parser} from "json2csv";
-import env from "dotenv";
-env.config({path: '../../../.env'});
+import * as fs from "fs";
 
-(async () => {
-    const browser = await chromium.launch({headless: false, slowMo: 200});
+async function getEmployeesByScraping() {
+    const browser = await chromium.launch({headless: false, slowMo: 200})
     const page = await browser.newPage();
-    await page.goto(process.env.TARGET_URL);
+    await page.goto('http://localhost:3000');
 
     const cardsLocator = page.locator('.cards.list-group-item');
     const numberOfCards = await cardsLocator.count();
@@ -21,8 +19,17 @@ env.config({path: '../../../.env'});
         const companyLocator = page.locator('.card-title.company');
         const companyText = await companyLocator.textContent();
 
-        const backLocator = page.locator('text=戻る');
-        await backLocator.click();
-
+        fetchedCards.push({
+            company: companyText,
+            name: cardText
+        })
     }
-})();
+    await browser.close();
+
+    const parser = new Parser();
+    const csv = parser.parse(fetchedCards);
+
+    fs.writeFileSync('./text-data.csv', csv);
+}
+
+export {getEmployeesByScraping};
