@@ -1,3 +1,2 @@
-function fn(number) {
-  return number * 2;
-}
+const dt = new Date();
+console.log(dt.toDateString());

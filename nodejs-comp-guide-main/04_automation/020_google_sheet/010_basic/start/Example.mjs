@@ -1,9 +1,11 @@
-import {GoogleSpreadsheet} from "google-spreadsheet";
 import env from "dotenv";
+import {GoogleSpreadsheet} from "google-spreadsheet";
 import {createRequire} from "module";
-env.config({path: '../../../.env'});
+
 const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
+
+env.config({path: '../../../.env'});
 
 (async () => {
     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
@@ -15,23 +17,15 @@ const secrets = require('../../../google_secrets.json');
 
     await doc.loadInfo();
 
-    const sheet = doc.sheetsByIndex[0];
-    await sheet.loadCells('A1:C5');
+    const firstSheet = doc.sheetsByIndex[0];
+    await firstSheet.loadCells('A1:C4');
 
-    const a1 = sheet.getCell(0, 0);
-    const a5 = sheet.getCell(4, 0);
-    const b1 = sheet.getCell(0, 1);
-    const b2 = sheet.getCellByA1('B2');
+    const a1 = firstSheet.getCellByA1('A1');
+    const b1 = firstSheet.getCellByA1('B1');
+    const c1 = firstSheet.getCellByA1('C1');
 
-    console.log(a5.textFormat);
-
-    a1.value = 11;
-    b1.value = 92;
-    b1.textFormat = {fontSize: 20, bold:true};
-    a5.value = '=sum(A1:A4)';
-
-    await sheet.saveUpdatedCells();
+    console.log(`a1: ${a1.value}`);
+    console.log(`b1: ${b1.value}`);
+    console.log(`c1: ${c1.value}`);
 
 })();
-
-//https://docs.google.com/spreadsheets/d/10xihAYhtdWP5xZObOcqty3_ajzI1dJJoot46A2tVnTY/edit#gid=0

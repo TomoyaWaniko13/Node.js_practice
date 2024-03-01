@@ -1,15 +1,16 @@
-import env from "dotenv";
+import env from 'dotenv';
 import nodemailer from "nodemailer";
+
 env.config({path: "../../../.env"});
 
-(async () => {
+async function sendEmail(subject, text) {
 
     const message = {
         from: process.env.EMAIL_FROM,
         to: process.env.EMAIL_TO,
-        subject: 'I am hungry',
-        text: 'This is sent by a Node.js script...'
-    };
+        subject,
+        text
+    }
 
     const smtpConfig = {
         host: 'smtp.gmail.com',
@@ -26,5 +27,6 @@ env.config({path: "../../../.env"});
     transporter.sendMail(message, function (err, response) {
         console.log(err || response);
     })
+}
 
-})();
+export {sendEmail};

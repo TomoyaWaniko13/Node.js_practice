@@ -1,12 +1,12 @@
-import {GoogleSpreadsheet} from 'google-spreadsheet';
-import env from 'dotenv';
-import {createRequire} from 'module';
+import env from "dotenv";
+import {createRequire} from "module";
+import {GoogleSpreadsheet} from "google-spreadsheet";
 import {getEmployeesByScraping} from "./scraping.mjs";
 
-env.config();
+env.config({path: "../../../.env"});
 
-const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
+const require = createRequire(import.meta.url);
 
 async function addEmployeesToGS() {
     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
@@ -27,4 +27,5 @@ async function addEmployeesToGS() {
     rows.forEach(row => row.save());
 }
 
-export {addEmployeesToGS}
+
+export {addEmployeesToGS};
