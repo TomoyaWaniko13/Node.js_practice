@@ -1,8 +1,17 @@
-import {GoogleSpreadsheet} from 'google-spreadsheet';
+// import {GoogleSpreadsheet} from 'google-spreadsheet';
+// import env from 'dotenv';
+// env.config({path: '../../../.env'});
+// import {createRequire} from 'module';
+// import {getEmployeesByScraping} from "./scraping.mjs";
+// const require = createRequire(import.meta.url);
+// const secrets = require('../../../google_secrets.json');
+
 import env from 'dotenv';
+import {createRequire} from "module";
+import {GoogleSpreadsheet} from "google-spreadsheet";
+import {getEmployeesByScraping} from './scraping.mjs';
+
 env.config({path: '../../../.env'});
-import {createRequire} from 'module';
-import {getEmployeesByScraping} from "./scraping.mjs";
 const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
 
@@ -16,4 +25,7 @@ const secrets = require('../../../google_secrets.json');
 
     await doc.loadInfo();
     const employees = await getEmployeesByScraping();
+    const sheet = doc.sheetsByTitle['scraping'];
+    const rows = await sheet.addRows(employees);
+    rows.forEach(row => row.save());
 })();
