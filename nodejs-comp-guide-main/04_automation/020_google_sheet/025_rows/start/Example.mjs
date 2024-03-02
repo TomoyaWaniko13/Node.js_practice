@@ -19,7 +19,7 @@ const secrets = require('../../../google_secrets.json');
     await doc.loadInfo();
 
     const peopleSheet = doc.sheetsByTitle['people'];
-    await peopleSheet.loadCells('A1:C4');
+    await peopleSheet.loadCells('A1:C13');
 
     const a1 = peopleSheet.getCellByA1('A1');
     const b1 = peopleSheet.getCellByA1('B1');
@@ -33,30 +33,29 @@ const secrets = require('../../../google_secrets.json');
 
     await peopleSheet.addRows([
         {
-            name: 'Neko san',
+            name: 'basic neko san',
             age: 10,
-            gender: 'M'
+            gender: 'f'
         },
         {
-            name: 'Ghost neko san',
-            age: 100,
-            gender: 'F'
+            name: 'big neko san',
+            age: 2,
+            gender: 'm'
         },
         {
-            name: "Cute neko san",
-            age: 0,
-            gender: 'M'
+            name: 'ghost neko san',
+            age: 10,
+            gender: 'f'
         }
-    ]);
+    ])
 
-    await delay(2000);
-
-
-    for (let i = 1; i < 4; i++) {
-        for (let j = 0; j < 3; j++) {
-            const cell = peopleSheet.getCell(i, j);
-            cell.value = null;
-        }
-        await peopleSheet.saveUpdatedCells();
-    }
+    // await delay(2000);
+    //
+    // for (let i = 1; i < 4; i++) {
+    //     for (let j = 0; j < 3; j++) {
+    //         const cell = peopleSheet.getCell(i, j);
+    //         cell.value = null;
+    //     }
+    //     await peopleSheet.saveUpdatedCells();
+    // }
 })();

@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/01_js_basic/020_arrow_function/start/async.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/delay.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/020_write/end/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/020_write/end/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/020_write/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/020_write/start/Example.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/delay.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/025_rows/start/delay.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/027_update_rows/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/030_practice/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/030_practice/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/040_crawl_and_write/end/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/040_crawl_and_write/end/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/020_google_sheet/040_crawl_and_write/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/020_google_sheet/040_crawl_and_write/start/writeToGS.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/email.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/email.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/google-sheet.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/google-sheet.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/main.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/main.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/scraping.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/04_automation/030_cron/040_integrate/start/scraping.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +70,7 @@
     "Node.js.main.mjs.executor": "Run",
     "Node.js.scraping.mjs.executor": "Run",
     "Node.js.test.cjs.executor": "Run",
+    "Node.js.writeToGS.mjs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -169,7 +175,7 @@
       <workItem from="1708662904270" duration="202000" />
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
-      <workItem from="1709321360483" duration="27669000" />
+      <workItem from="1709321360483" duration="35458000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -339,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709334910277</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update">
+      <option name="closed" value="true" />
+      <created>1709357900515</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1709357900516</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

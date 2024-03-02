@@ -19,8 +19,8 @@ import { getEmployeesByScraping } from "./scraping.mjs";
   const employees = await getEmployeesByScraping();
 
   const sheet = doc.sheetsByTitle['scraping'];
-  
-  const rows = await sheet.addRows(employees);
-
-  rows.forEach(row => row.save());
+  await sheet.addRows(employees);
+  // const rows = await sheet.addRows(employees);
+  //
+  // rows.forEach(row => row.save());
 })();
