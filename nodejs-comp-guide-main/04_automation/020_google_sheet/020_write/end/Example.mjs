@@ -24,6 +24,7 @@ const secrets = require('../../../google_secrets.json');
     const b1 = sheet.getCell(0,1);
     const b2 = sheet.getCellByA1('B2');
 
+    console.log(`textFormat of a1:\n${JSON.stringify(a1._rawData.effectiveFormat.textFormat, null, 2)}`);
     console.log('a5', a5.textFormat);
 
     a1.value = 11;
