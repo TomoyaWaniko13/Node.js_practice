@@ -1,7 +1,7 @@
 import {chromium} from "@playwright/test";
 
 async function getEmployeesByScraping() {
-    const browser = await chromium.launch({headless: false, slowMo: 100});
+    const browser = await chromium.launch({headless: false, slowMo: 50});
     const page = await browser.newPage();
     await page.goto('http://localhost:3000');
 
@@ -30,3 +30,5 @@ async function getEmployeesByScraping() {
     return fetchedCard;
 }
 
+
+export {getEmployeesByScraping};

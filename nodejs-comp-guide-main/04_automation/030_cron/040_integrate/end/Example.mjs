@@ -8,6 +8,7 @@ cron.schedule('46 20 * * *', () => {
 });
 
 async function main() {
+  //maybe this line should be const dt = new Date();
   const dt = new Date;
   const dtStr = dt.toDateString();
   const sheetUrl = `https://docs.google.com/spreadsheets/d/${process.env.GOOGLE_SHEET_ID}`;

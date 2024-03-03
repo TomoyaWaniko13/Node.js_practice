@@ -1,27 +1,23 @@
 import {chromium} from "@playwright/test";
-import env from "dotenv";
-
-env.config({path: "../../../.env"});
-
 
 async function getEmployeesByScraping() {
-    const browser = await chromium.launch({headless: false, slowMo: 100})
+    const browser = await chromium.launch({headless: false, slowMo: 100});
     const page = await browser.newPage();
     await page.goto('http://localhost:3000');
 
     const cardsLocator = page.locator('.cards.list-group-item');
     const numberOfCards = await cardsLocator.count();
-    const fetchedCards = [];
 
+    const fetchedCard = [];
     for (let i = 0; i < numberOfCards; i++) {
         const eachCardLocator = cardsLocator.locator(`nth=${i} >> a`);
         const name = await eachCardLocator.textContent();
-        await eachCardLocator.click();
+        await eachCardLocator.click()
 
         const companyLocator = page.locator('.card-title.company');
         const company = await companyLocator.textContent();
 
-        fetchedCards.push({
+        fetchedCard.push({
             name, company
         })
 
@@ -30,6 +26,7 @@ async function getEmployeesByScraping() {
     }
 
     await browser.close();
-    console.log(fetchedCards);
+    return fetchedCard;
 }
 
+export {getEmployeesByScraping};
