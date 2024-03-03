@@ -2,6 +2,7 @@ import env from 'dotenv';
 import {createRequire} from "module";
 import {GoogleSpreadsheet} from "google-spreadsheet";
 import {getEmployeesByScraping} from "./scraping.mjs";
+
 env.config({path: '../../../.env'});
 const require = createRequire(import.meta.url);
 const secrets = require('../../../google_secrets.json');
