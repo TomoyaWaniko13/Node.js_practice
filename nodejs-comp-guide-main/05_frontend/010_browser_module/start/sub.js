@@ -1,11 +1,4 @@
 function helloFromSub() {
-    console.log('hello from sub.js');
+  console.log('This');
+
 }
-
-export {
-    helloFromSub
-};
-
-// module.exports = {
-//     helloFromSub
-// }

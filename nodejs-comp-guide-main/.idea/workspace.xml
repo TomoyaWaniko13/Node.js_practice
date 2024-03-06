@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/end/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.11.0",
     "javascript.nodejs.core.library.typings.version": "20.11.19",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/020_google_sheet/020_write/start",
+    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,7 +83,8 @@
     "npm.build-start.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.test.executor": "Run",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "prettierjs.PrettierConfiguration.Package": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
     "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -111,7 +116,7 @@
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build-start">
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
@@ -169,7 +174,8 @@
       <workItem from="1708662904270" duration="202000" />
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
-      <workItem from="1709321360483" duration="48587000" />
+      <workItem from="1709321360483" duration="49329000" />
+      <workItem from="1709566898138" duration="2190000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -371,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709499205524</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update">
+      <option name="closed" value="true" />
+      <created>1709565665809</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709565665809</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
