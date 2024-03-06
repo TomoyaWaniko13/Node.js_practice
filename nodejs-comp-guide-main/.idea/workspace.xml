@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/end/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" afterDir="false" />
@@ -57,6 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
     "Node.js.Example.mjs.executor": "Run",
     "Node.js.calc.js.executor": "Run",
     "Node.js.delay.mjs.executor": "Run",
@@ -116,7 +115,7 @@
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build-start">
+  <component name="RunManager">
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
@@ -175,7 +174,7 @@
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
       <workItem from="1709321360483" duration="49329000" />
-      <workItem from="1709566898138" duration="2190000" />
+      <workItem from="1709566898138" duration="4449000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -385,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709565665809</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Update">
+      <option name="closed" value="true" />
+      <created>1709752641588</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709752641589</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
