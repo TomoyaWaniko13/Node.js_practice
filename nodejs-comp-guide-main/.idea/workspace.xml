@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,6 +80,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build-start.executor": "Run",
+    "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.test.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/node_modules/prettier",
@@ -115,12 +116,22 @@
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
       <scripts>
         <script value="build-start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -148,6 +159,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build-start" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
@@ -174,7 +186,7 @@
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
       <workItem from="1709321360483" duration="49329000" />
-      <workItem from="1709566898138" duration="4449000" />
+      <workItem from="1709566898138" duration="8372000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -392,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709752641589</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update">
+      <option name="closed" value="true" />
+      <created>1709758000513</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709758000513</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
