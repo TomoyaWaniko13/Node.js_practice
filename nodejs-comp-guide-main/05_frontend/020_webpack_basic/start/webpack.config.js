@@ -1,8 +1,17 @@
+const path = require('path');
+
 module.exports = {
     mode: 'development',
     entry: './main.js',
     output: {
-        path: 'public',
+        path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
+    },
+    devServer: {
+        port: 9000,
+        open: true,
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        }
     }
 }

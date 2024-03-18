@@ -1,11 +1,5 @@
-function helloFromSub() {
-    console.log('hello, sub');
+const helloFromSub = () => {
+    console.log('Hello from sub.js');
 }
 
-export {
-    helloFromSub
-}
-
-// module.exports = {
-//     helloFromSub
-// }
+export {helloFromSub};

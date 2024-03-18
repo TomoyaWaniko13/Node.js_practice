@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="">
+    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/sub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -66,14 +71,16 @@
     "Node.js.main.js.executor": "Run",
     "Node.js.main.mjs.executor": "Run",
     "Node.js.scraping.mjs.executor": "Run",
+    "Node.js.sub.js.executor": "Run",
     "Node.js.test.cjs.executor": "Run",
+    "Node.js.webpack.config.js.executor": "Run",
     "Node.js.writeToGS.mjs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.11.0",
     "javascript.nodejs.core.library.typings.version": "20.11.19",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
+    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/05_frontend/020_webpack_basic/start",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,18 +112,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/05_frontend/020_webpack_basic/start" />
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet/020_write/start" />
       <recent name="$PROJECT_DIR$/04_automation/010_playwright/064_export_settings_env/start" />
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet/010_basic/start" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/dist" />
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet" />
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet/020_write" />
       <recent name="$PROJECT_DIR$/03_npm/020_dep_vs_devDep/start" />
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
@@ -147,6 +156,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/05_frontend/020_webpack_basic/start/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/03_npm/040_npm_script/start/package.json" />
       <command value="run" />
@@ -159,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build-start" />
         <item itemvalue="npm.dev" />
@@ -186,7 +206,7 @@
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
       <workItem from="1709321360483" duration="49329000" />
-      <workItem from="1709566898138" duration="13489000" />
+      <workItem from="1709566898138" duration="27130000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -428,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710675838586</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update">
+      <option name="closed" value="true" />
+      <created>1710720878406</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1710720878406</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
