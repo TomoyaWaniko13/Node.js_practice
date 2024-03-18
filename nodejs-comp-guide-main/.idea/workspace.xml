@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
+    <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" beforeDir="false" afterPath="$PROJECT_DIR$/05_frontend/010_browser_module/start/sub.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,7 +84,7 @@
     "npm.dev.executor": "Run",
     "npm.test.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
+    "settings.editor.selected.configurable": "preferences.editor",
     "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/04_automation/999_demo/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -113,7 +116,7 @@
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager">
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
@@ -183,7 +186,7 @@
       <workItem from="1708663204220" duration="27889000" />
       <workItem from="1709255046125" duration="17388000" />
       <workItem from="1709321360483" duration="49329000" />
-      <workItem from="1709566898138" duration="9919000" />
+      <workItem from="1709566898138" duration="13489000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -417,7 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709817654960</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Update">
+      <option name="closed" value="true" />
+      <created>1710675838586</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1710675838586</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
