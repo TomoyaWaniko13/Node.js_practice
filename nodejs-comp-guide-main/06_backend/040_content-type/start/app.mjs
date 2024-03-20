@@ -1,12 +1,16 @@
 import * as http from "http";
 
-const server = http.createServer(function(req, res) {
+const server = http.createServer(function (req, res) {
     console.log(req.url);
-    if(req.url === '/hello') {
-        res.end('<script>window.alert("frontend")</script>');
-    } else if(req.url === '/bye') {
+    // res.writeHead(200, {'content-type': 'text/html; charset=UTF-8'});
+    if (req.url === '/hello') {
+        res.end('<h1>こんにちは</h1>');
+    } else if (req.url === '/bye') {
         res.end('bye');
+    } else {
+        res.end('Neko san.');
     }
+
 });
 
-server.listen(8080);
+server.listen(10000);
