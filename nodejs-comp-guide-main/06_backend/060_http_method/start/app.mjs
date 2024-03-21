@@ -25,11 +25,18 @@ const server = http.createServer(function (req, res) {
             </form>
             `);
     } else {
-        console.log(req.url);
-        console.log(req.method);
-        if (req.method === "GET") {
+        console.log(`req.url: ${req.url}`);
+        console.log(`req.method: ${req.method}`);
 
+        if (req.method === 'GET') {
+            console.log(req.url.split('?'));
+            const queryString = req.url.split('?')[1];
+            const params = new URLSearchParams(queryString);
+            console.log(params.has('param1'));
         }
+
+        res.end('<h1>else</h1>');
+        console.log();
     }
 });
 
