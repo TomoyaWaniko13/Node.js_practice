@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/06_backend/020_path_control/start/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06_backend/040_content-type/start/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/020_path_control/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/020_path_control/start/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/040_content-type/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/040_content-type/start/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/050_http_status/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/050_http_status/start/app.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_backend/060_http_method/end/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/060_http_method/end/app.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/06_backend/060_http_method/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/060_http_method/start/app.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +203,7 @@
       <workItem from="1709255046125" duration="17388000" />
       <workItem from="1709321360483" duration="49329000" />
       <workItem from="1709566898138" duration="40382000" />
-      <workItem from="1710797925353" duration="12900000" />
+      <workItem from="1710797925353" duration="17930000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -481,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710795089578</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Update">
+      <option name="closed" value="true" />
+      <created>1710902774465</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1710902774465</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

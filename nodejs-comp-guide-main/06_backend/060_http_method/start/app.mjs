@@ -17,7 +17,7 @@ const server = http.createServer(function (req, res) {
     // console.log(`requested URL: ${req.url}`);
 
     if (req.url === '/') {
-        res.write(`<a href="/result?param1=Neko1&param2=Neko2">get method link</a>`);
+        res.write(`<a href="/result?param1=1&param2=2">get method link</a>`);
         res.end(`
             <form action="/result" method="post">
                 <input type="text" name="title">
@@ -25,14 +25,11 @@ const server = http.createServer(function (req, res) {
             </form>
             `);
     } else {
-        console.log(`requested URL: ${req.url}`);
-        console.log(`requested method: ${req.method}`);
-
+        console.log(req.url);
+        console.log(req.method);
         if (req.method === "GET") {
-            new URLSearchParams(req.url);
-        }
 
-        res.end(req.url);
+        }
     }
 });
 
