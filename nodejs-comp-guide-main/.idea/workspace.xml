@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_js_basic/090_promise/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/01_js_basic/090_promise/start/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/06_backend/060_http_method/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/060_http_method/start/app.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_backend/070_express_basic/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/070_express_basic/start/app.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_backend/090_json/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/090_json/start/app.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_backend/100_recieve_json/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/100_recieve_json/start/app.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +124,10 @@
       <recent name="$PROJECT_DIR$/04_automation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.main.js">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/01_js_basic/090_promise/start/main.js" working-dir="$PROJECT_DIR$/01_js_basic/090_promise/start">
+      <method v="2" />
+    </configuration>
     <configuration name="build-start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/04_automation/999_demo/package.json" />
       <command value="run" />
@@ -161,23 +168,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/03_npm/040_npm_script/start/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.main.js" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build-start" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +201,7 @@
       <workItem from="1709566898138" duration="40382000" />
       <workItem from="1710797925353" duration="24491000" />
       <workItem from="1711062707971" duration="1320000" />
-      <workItem from="1711064111014" duration="6726000" />
+      <workItem from="1711064111014" duration="28497000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -510,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711065209510</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711079167141</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1711079167141</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
