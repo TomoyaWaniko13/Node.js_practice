@@ -40,5 +40,5 @@ app.post('/result', function (req, res) {
 });
 
 app.listen(PORT, function () {
-  console.log(`Server start: http://localhost:${PORT}`);
+
 });
