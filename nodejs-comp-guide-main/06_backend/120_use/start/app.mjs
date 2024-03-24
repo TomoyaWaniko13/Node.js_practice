@@ -19,14 +19,30 @@ const app = express();
 app.use(express.json());
 
 // ミドルウェア：ルートハンドラの前後に行われる処理
-app.use('/', function(req, res, next) {
+app.use('/', function (req, res, next) {
+    console.log('start 1');
+    if (true) {
+        return next();
+    }
 
+});
+f
+app.use('/', function (req, res, next) {
+    console.log('middle');
+    next();
 });
 
 // ルートハンドラ：パスとメソッドに紐付くメインの処理
-app.get('/', function(req, res) {
+app.get('/', function (req, res, next) {
+    console.log('get1');
+    next();
+});
 
+app.get('/', function (req, res, next) {
+    console.log('get2');
 });
+
 app.listen(PORT, function () {
-  console.log(`Server start: http://localhost:${PORT}`);
+    console.log(`Server start: http://localhost:${PORT}`);
 });
+

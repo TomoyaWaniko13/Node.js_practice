@@ -1,6 +1,6 @@
 import express from 'express';
 
-const router = express.Router();
+const productRouter = express.Router();
 
 const products = [
     { name: 'table', price: 1000 },
@@ -8,30 +8,30 @@ const products = [
     { name: 'clock', price: 700 },
 ];
 
-router.get('/', function (req, res) {
+productRouter.get('/', function (req, res) {
     res.json(products);
 });
 
-router.get('/:id', function (req, res) {
+productRouter.get('/:id', function (req, res) {
     const targetId = req.params.id;
     res.json(products[targetId]);
 });
 
-router.post('/', function (req, res) {
+productRouter.post('/', function (req, res) {
     const newProduct = req.body;
     products.push(newProduct);
     console.log(products);
     res.json(newProduct);
 });
 
-router.delete('/:id', function (req, res) {
+productRouter.delete('/:id', function (req, res) {
     const deleteId = req.params.id;
     products.splice(deleteId, 1);
     console.log(products);
     res.json({ deleteId });
 });
 
-router.patch('/:id', function (req, res) {
+productRouter.patch('/:id', function (req, res) {
     const targetProduct = products[req.params.id];
     if (req.body.hasOwnProperty('name')) {
         targetProduct.name = req.body.name;
@@ -43,4 +43,4 @@ router.patch('/:id', function (req, res) {
     res.json(targetProduct);
 });
 
-export default router;
+export default productRouter;

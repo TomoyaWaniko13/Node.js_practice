@@ -1,7 +1,7 @@
+import productRouter from "./products.mjs";
 import express from "express";
-import productRoutes from "./products.mjs";
 
-const apiRoutes = express.Router();
-apiRoutes.use('/products', productRoutes);
+const apiRouter = express.Router();
+apiRouter.use('/products', productRouter);
 
-export default apiRoutes;
+export default apiRouter;

@@ -1,13 +1,13 @@
 import express from "express";
-import apiRoutes from "./api-routes/index.mjs";
+import apiRouter from "./api-routes/index.mjs";
 
 const PORT = 8080;
 const app = express();
 
 app.use(express.json());
 
-app.use('/api', apiRoutes);
+app.use('/api', apiRouter);
 
-app.listen(PORT, function () {
+app.listen(PORT, function (req, res) {
     console.log(`server is running at http://localhost:${PORT}`);
 });
