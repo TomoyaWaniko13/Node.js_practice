@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/110_rest_api/start/api-routes/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/110_rest_api/start/api-routes/index.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/110_rest_api/start/api-routes/products.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/110_rest_api/start/api-routes/products.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/110_rest_api/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/110_rest_api/start/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/120_use/request.http" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/120_use/request.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/120_use/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/120_use/start/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_mongodb/.env" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07_mongodb/010_connect_find/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/010_connect_find/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_mongodb/030_insert/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/030_insert/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_mongodb/040_delete/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/040_delete/start/Example.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +185,7 @@
       <workItem from="1711064111014" duration="35454000" />
       <workItem from="1711159076646" duration="18113000" />
       <workItem from="1711197272538" duration="520000" />
-      <workItem from="1711235333254" duration="13599000" />
+      <workItem from="1711235333254" duration="18785000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -527,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711236297277</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711323035122</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1711323035122</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,7 +1,7 @@
-import {MongoClient, ServerApiVersion} from "mongodb";
+import {MongoClient, ObjectID, ServerApiVersion} from "mongodb";
 import env from 'dotenv';
 
-env.config({path: '/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/07_mongodb/.env'});
+env.config({path: '../../.env'});
 
 
 const uri = process.env.MONGO_URI;
@@ -27,8 +27,17 @@ async function getCollection() {
 
 async function getAllBooks() {
     const collection = await getCollection();
-    const cursor = collection.find();
+
+    // let cursor = collection.find({$or: [{rating: 3}, {title: 'バックエンド開発'}]});
+    // cursor = collection.find({title: {$in: ['ごんぎつね４', 'バックエンド開発']}});
+    // let cursor = collection.find({rating: {$gt: 2, $lt: 5}});
+    // let cursor = collection.find({rating: {$gte: 2, $lte: 5}});
+    // let cursor = collection.find({rating: {$gte: 2, $lte: 4}}).sort({rating: 1});
+    // let cursor = collection.find({rating: {$gte: 2, $lte: 4}}).sort({rating: -1});
+    let cursor = collection.find({title: {$regex: /^潮/}});
+
     const result = await cursor.toArray();
+    console.log(result);
     await client.close();
 }
 
