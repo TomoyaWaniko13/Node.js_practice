@@ -27,6 +27,10 @@ async function deleteBook() {
     // const result = await col.deleteOne({title: 'こんにちは4'});
     // const result = await col.deleteMany({title: {$regex: /^こんにちは/}});
 
+    // const result = await col.deleteMany({title: {$regex: /title/}});
+    const result = await col.deleteMany({name:{$regex:
+                /^Z/}});
+
     console.log(result);
     await client.close();
 }

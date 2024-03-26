@@ -26,7 +26,7 @@ async function getCollection() {
 async function getAllBooks() {
     const col = await getCollection();
 
-    // let cursor = col.find();
+    let cursor = col.find();
     // let cursor = col.find({title: '潮騒'});
     // let cursor = col.find({rating: 5});
     // let cursor = col.find({title: '潮騒', rating: 5});
@@ -35,15 +35,7 @@ async function getAllBooks() {
     // let cursor = col.find({title: {$in: ['ごんぎつね4', 'バックエンド開発']}});
     // let cursor = col.find({rating: {$gt: 3, $lt: 5}});
     // let cursor = col.find({rating: {$gte: 3, $lte: 5}}).sort({rating: 1});
-
-    // let cursor = col.find();
-    // let cursor = col.find({title: '潮騒'});
-    // let cursor = col.find({rating: 5});
-    // let cursor = col.find({title: '潮騒', rating: 5});
-    // let cursor = col.find({$or: [{rating: 3, title: 'バックエンド開発'}]});
-    // let cursor = col.find({title: {$in: ['ごんぎつね4', 'バックエンド開発']}});
-    // let cursor = col.find({rating: {$gt: 2, $lt: 4}});
-    let cursor = col.find({rating: {$gte: 2, $lte: 4}}).sort({rating: -1});
+    // let cursor = col.find({description: {$regex: /^三/}});
 
 
     const result = await cursor.toArray();

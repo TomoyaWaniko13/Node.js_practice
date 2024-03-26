@@ -24,8 +24,11 @@ updateBook();
 
 async function updateBook() {
     const col = await getCollection();
+
     // await col.updateOne({title: 'バックエンド開発'}, {$set: {rating: 3}});
-    await col.updateMany({description: '三島由紀夫'}, {$set: {rating: 5}});
+    // await col.updateMany({description: '三島由紀夫'}, {$set: {rating: 5}});
+    // await col.updateOne({title: 'Neko'}, {$set: {title: 'Neko 1'}});
+    await col.updateMany({title: '潮騒'}, {$set: {rating: 2}});
 
     await client.close();
 }

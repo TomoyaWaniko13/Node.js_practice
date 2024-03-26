@@ -23,20 +23,20 @@ insertBook();
 
 async function insertBook() {
     const col = await getCollection();
-    const result = await col.insertMany([
-        {
-            title: 'こんにちは4',
-            int: 10,
-            bool: true,
-            dt: new Date,
-            array: [0, 1, 2],
-            obj: {
-                bye: 'さようなら'
-            }
-        },
-        {title: 'こんにちは2'},
-        {title: 'こんにちは3'},
-    ]);
+
+    // const result = await col.insertOne({title:'inserted title'});
+    // const result = await col.insertMany([
+    //     {title: 'title1'},
+    //     {title: 'title2'},
+    //     {title: 'title3'},
+    // ]);
+
+    const result = await col.insertOne({
+        title: 'Neko 2',
+        rating: 5,
+        array: [2, 2, 2, 2]
+    });
+
     console.log(result);
     await client.close();
 }
