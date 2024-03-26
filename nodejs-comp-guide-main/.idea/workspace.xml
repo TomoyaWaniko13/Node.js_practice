@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_mongodb/050_update/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/050_update/start/Example.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_mongodb/060_mongoose/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/060_mongoose/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_mongodb/070_model_schema/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/070_model_schema/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_mongodb/080_model_bookshelf/start/Example.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/07_mongodb/080_model_bookshelf/start/Example.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/08_bookshelf_backend/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
     "npm.test.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/05_frontend/050_vite_react/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/99_bookshelf/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -150,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.request | #1" />
         <item itemvalue="HTTP Request.request | #1 (1)" />
         <item itemvalue="HTTP Request.request | #2 (1)" />
-        <item itemvalue="HTTP Request.request | #1" />
         <item itemvalue="HTTP Request.request | #2" />
         <item itemvalue="HTTP Request.request | #3" />
       </list>
@@ -184,7 +185,10 @@
       <workItem from="1711064111014" duration="35454000" />
       <workItem from="1711159076646" duration="18113000" />
       <workItem from="1711197272538" duration="520000" />
-      <workItem from="1711235333254" duration="20208000" />
+      <workItem from="1711235333254" duration="29956000" />
+      <workItem from="1711434814883" duration="3830000" />
+      <workItem from="1711447661122" duration="1200000" />
+      <workItem from="1711449695924" duration="5552000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -538,7 +542,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711358613058</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711418924408</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1711418924408</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711426921426</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1711426921426</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711449926205</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1711449926205</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

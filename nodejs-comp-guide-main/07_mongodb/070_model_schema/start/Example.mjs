@@ -6,27 +6,35 @@ env.config({path: '../../.env'});
 
 
 mongoose.connect(process.env.MONGO_URI);
-const catSchema = new Schema({
-    name: {type: String, required: true},
-    size: {type: Number, required: true, enum: [2, 22, 222]},
-    weight: {type: Decimal128, default: 22.2},
-    birthDate: {
-        type: Date,
-        set: function (newVal) {
-            return new Date(newVal)
+
+// const Cat = mongoose.model('Cat', {name: String});
+const catSchema = new Schema(
+    {
+        name: {type: String, required: true},
+        size: {type: Number, enum: [2, 22, 222]},
+        weight: {type: Decimal128, default: 22.2},
+        birthDate: {
+            type: Date,
+            set: function (newVal) {
+                return new Date(newVal);
+            },
+            get: function (val) {
+                return val instanceof Date ? val : new Date(val);
+            },
         },
-        get: function (val) {
-            return val instanceof Date ? val : new Date(val);
-        },
+        anything: Schema.Types.Mixed
     },
-    array: {type: [], default: [2, 2, 2]},
-    anything: Schema.Types.Mixed
-});
+    {timestamps: true}
+);
+
 const Cat = model('Cat', catSchema);
+
 const kitty = new Cat({
-    name: 'Ultimate Neko san',
+    name: 'DJ Neko san',
     size: 22,
-    birthDate: '2002/02/02'
+    birthDate: '2222/02/22',
+    anything: 'Neko san is the cutest.'
 });
-// kitty.save().then(() => console.log('task completed...'));
+
+// kitty.save().then(() => console.log('saved.'));
 kitty.save().then((doc) => console.log(doc.birthDate instanceof Date));
