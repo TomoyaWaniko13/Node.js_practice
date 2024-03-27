@@ -1,14 +1,18 @@
 import * as http from 'http';
 
-const server = http.createServer(function (req, res) {
-    console.log(req.url);
+const server = http.createServer((req, res) => {
+    console.log(`req.url: ${req.url}`);
+
     if (req.url === '/hello') {
-        res.end('<script>window.alert("frontend")</script>');
+        res.end(`<script>console.log("frontend")</script>`);
     }else if (req.url === '/bye') {
         res.end('bye');
-    }else{
+    } else {
         res.end('default');
     }
 });
 
-server.listen(9000);
+server.listen(8080);
+
+
+
