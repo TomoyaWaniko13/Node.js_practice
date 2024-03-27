@@ -24,6 +24,7 @@ app.get('/', function (req, res) {
 app.post('/cart', function (req, res) {
   //req.body is { product: [ '1', '2' ] }
   const products = req.body.product;
+
   // console.log(`${products[0]},${products[1]} have been added to your cart.`);
   res.send(`${products.join(', ')} have been added to your cart.`);
 });

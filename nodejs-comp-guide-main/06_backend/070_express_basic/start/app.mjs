@@ -3,6 +3,7 @@ import express from "express";
 const PORT = 8080;
 const app = express();
 
+//POSTの本文の値を req.body propertyとして習得できるようになる。
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', function (req, res) {
@@ -18,14 +19,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/result', function (req, res) {
+    //GETのパラメータを取得
     const params = req.query;
     console.log(params);
 });
 
 app.post('/result', function (req, res) {
+    //req.body is { title: [ '1', '2' ], description: '3' };
     const params = req.body;
     console.log(params);
-    //params is { title: [ '1', '2' ], description: '3' }
 });
 
 app.listen(PORT, () => {
