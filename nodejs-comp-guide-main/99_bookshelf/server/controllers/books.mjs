@@ -15,7 +15,7 @@ export const getAllBooks = async function (req, res) {
 export const getBookById = async function (req, res) {
   const book = await Book.findById(req.params.id);
 
-  if (book === null) return res.status(404).send("Book Not Found");
+  if (book === null) return res.status(404).send("BookModel Not Found");
 
   res.json(book);
 };
@@ -45,7 +45,7 @@ export const updateBook = async function (req, res) {
   const _id = req.params.id;
   const newBook = await Book.findByIdAndUpdate(_id, req.body, { new: true });
 
-  if (newBook === null) return res.status(404).send("Book Not Found");
+  if (newBook === null) return res.status(404).send("BookModel Not Found");
 
   res.json(newBook);
 };
@@ -54,7 +54,7 @@ export const deleteBook = async function (req, res) {
   const _id = req.params.id;
   const result = await Book.findByIdAndDelete(_id);
 
-  if (result === null) return res.status(404).send("Book Not Found");
+  if (result === null) return res.status(404).send("BookModel Not Found");
 
   res.json({ msg: "Delete succeeded." });
 };
@@ -88,7 +88,7 @@ export const getBookById = async function (req, res) {
     if (result.length) {
       res.json(result);
     } else {
-      res.status(404).send("Book Not Found");
+      res.status(404).send("BookModel Not Found");
     }
   } catch (err) {
     // console.log(err.stack);
@@ -130,7 +130,7 @@ export const updateBook = async function (req, res) {
       if (result.matchedCount) {
         res.status(200).json(await col.find(filter).toArray());
       } else {
-        res.status(404).send("Book Not Found");
+        res.status(404).send("BookModel Not Found");
       }
     } catch (err) {
       res.status(500).json(err.stack);
@@ -150,7 +150,7 @@ export const deleteBook = async function (req, res) {
     if (result.deletedCount) {
       res.json({ msg: "Delete succeeded." });
     } else {
-      res.status(404).send("Book Not Found");
+      res.status(404).send("BookModel Not Found");
     }
   } catch (err) {
     res.status(500).json(err.stack);
@@ -200,7 +200,7 @@ export const getBookById = function (req, res) {
   if (book) {
     res.json(book);
   } else {
-    res.status(404).send("Book Not Found");
+    res.status(404).send("BookModel Not Found");
   }
 };
 
@@ -229,7 +229,7 @@ export const updateBook = function (req, res) {
       }
     }
     if (!book) {
-      res.status(404).send("Book Not Found");
+      res.status(404).send("BookModel Not Found");
     }
   }
 };

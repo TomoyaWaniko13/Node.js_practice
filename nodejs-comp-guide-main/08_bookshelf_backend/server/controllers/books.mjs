@@ -1,14 +1,14 @@
 import { validationResult } from 'express-validator';
-import Book from '../models/book.mjs';
+import BookModel from '../models/bookModel.mjs';
 
 async function getAllBooks(req, res) {
-  const books = await Book.find().sort({ updatedAt: -1 });
+  const books = await BookModel.find().sort({ updatedAt: -1 });
   res.json(books);
 }
 
 async function getBookById(req, res) {
   const _id = req.params.id;
-  const book = await Book.findById(_id);
+  const book = await BookModel.findById(_id);
 
   if (book === null) return res.status(404).json({ msg: 'Page Not Found' });
 
@@ -23,7 +23,7 @@ async function registBook(req, res) {
     return res.status(400).json(errs);
   }
 
-  const book = new Book(req.body);
+  const book = new BookModel(req.body);
   const newBook = await book.save();
 
   res.status(201).json(newBook);
@@ -39,7 +39,7 @@ async function updateBook(req, res) {
 
   const { title, description, comment, rating } = req.body;
   const _id = req.params.id;
-  const book = await Book.findById(_id);
+  const book = await BookModel.findById(_id);
 
   if (book === null) return res.status(404).json({ msg: 'Page Not Found' });
 
@@ -53,9 +53,9 @@ async function updateBook(req, res) {
 
 async function deleteBook(req, res) {
   const _id = req.params.id;
-  const { deletedCount } = await Book.deleteOne({ _id });
+  const { deletedCount } = await BookModel.deleteOne({ _id });
 
-  if (deletedCount === 0) return res.status(404).json({ msg: 'Target Book Not Found' });
+  if (deletedCount === 0) return res.status(404).json({ msg: 'Target BookModel Not Found' });
 
   res.json({ msg: 'Delete succeeded.' });
 }

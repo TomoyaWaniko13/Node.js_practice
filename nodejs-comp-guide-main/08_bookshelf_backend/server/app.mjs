@@ -1,29 +1,18 @@
 import express from "express";
 import env from "dotenv";
-env.config();
+import apiRouter from "./api-routes/index.mjs";
+import '../server/helpers/db.mjs';
 
-import apiRoutes from "./api-routes/index.mjs";
-import "./helpers/db.mjs";
+env.config();
 
 const app = express();
 const port = process.env.PORT || 8080;
 
+// this middleware is necessary because the server receives JSON
 app.use(express.json());
-
-// API
-app.use('/api', apiRoutes);
-
-app.use(function(req, res) {
-    res.status(404).json({ msg: "Page Not Found" });
-});
-
-app.use(function(err, req, res, next) {
-    if(res.headersSent) {
-        return next(err);
-    }
-    res.status(500).json({ msg: '不正なエラーが発生しました。'});
-});
+app.use('/api', apiRouter);
 
 app.listen(port, () => {
-    console.log(`Server Start: http://localhost:${port}`);
+    console.log(`server is running at http://localhost:${port}`);
 });
+

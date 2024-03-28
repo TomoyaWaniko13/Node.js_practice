@@ -13,7 +13,9 @@ async function getCollection() {
     try {
         await client.connect();
         const db = client.db('bookshelf');
-        return db.collection('books');
+
+        // return db.collection('books');
+        return db.collection('cats');
     } catch {
         await client.close();
     }
@@ -24,17 +26,8 @@ insertBook();
 async function insertBook() {
     const col = await getCollection();
 
-    // const result = await col.insertOne({title:'inserted title'});
-    // const result = await col.insertMany([
-    //     {title: 'title1'},
-    //     {title: 'title2'},
-    //     {title: 'title3'},
-    // ]);
-
     const result = await col.insertOne({
-        title: 'Neko 2',
-        rating: 5,
-        array: [2, 2, 2, 2]
+        name: 'basic neko san'
     });
 
     console.log(result);

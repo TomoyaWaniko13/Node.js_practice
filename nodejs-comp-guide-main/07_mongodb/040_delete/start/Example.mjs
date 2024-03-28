@@ -13,13 +13,14 @@ async function getCollection() {
     try {
         await client.connect();
         const db = client.db('bookshelf');
-        return db.collection('books');
+
+        // return db.collection('books');
+        return db.collection('cats');
     } catch {
         await client.close();
     }
 }
 
-deleteBook();
 
 async function deleteBook() {
     const col = await getCollection();
@@ -28,9 +29,13 @@ async function deleteBook() {
     // const result = await col.deleteMany({title: {$regex: /^こんにちは/}});
 
     // const result = await col.deleteMany({title: {$regex: /title/}});
-    const result = await col.deleteMany({name:{$regex:
-                /^Z/}});
+    // const result = await col.deleteMany({name:{$regex: /^Z/}});
+
+    // const result = await col.deleteOne({name: 'DJ Neko san'});
+    const result = await col.deleteOne({name: 'Ultimate neko san'});
 
     console.log(result);
     await client.close();
 }
+
+deleteBook();

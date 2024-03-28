@@ -53,7 +53,7 @@ async function createBook() {
 
 createBook();
 
-// const book = new Book({
+// const book = new BookModel({
 //     title: 'Neko san with neko san.',
 //     description: 'Explanation of neko san species',
 //     comment: 'amazing.',

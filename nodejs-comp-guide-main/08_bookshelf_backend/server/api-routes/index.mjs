@@ -1,7 +1,7 @@
 import express from "express";
-import booksRouter from "./books.mjs";
+import bookRouter from "./bookRouter.mjs";
 
-const router = express.Router();
-router.use('/books', booksRouter);
+const apiRouter = express.Router();
+apiRouter.use('/books', bookRouter);
 
-export default router;
+export default apiRouter;
