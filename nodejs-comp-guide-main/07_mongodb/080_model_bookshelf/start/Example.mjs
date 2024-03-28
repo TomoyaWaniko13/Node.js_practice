@@ -1,7 +1,54 @@
-import mongoose, {model, Schema} from 'mongoose';
+import mongoose from 'mongoose';
 import env from 'dotenv';
 
 env.config({path: '../../.env'});
+
+// mongoose.connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+//     .then(() => console.log('MongoDB connected...'))
+//     .catch(err => conole.err('MongoDB connection error:', err));
+//
+// const bookSchema = new Schema({
+//         title: {type: String, required: true},
+//         description: {type: String, required: true},
+//         rating: {type: Number, required: true, enum: [1, 2, 3, 4, 5], default: 3},
+//         comment: {type: String, required: true},
+//     },
+//     {timestamps: true}
+// );
+//
+// const Book = model('Book', bookSchema);
+//
+// async function createAndSaveBook() {
+//     const book = new Book({
+//         title: 'Cuteness of Neko san.',
+//         description: 'Neko san is cute.',
+//         rating: 5,
+//         comment: 'Neko san is equal to neko san.'
+//     });
+//
+//     try {
+//         const savedBook = await book.save();
+//         console.log(savedBook._id);
+//     } catch (err) {
+//         console.error('Error saving book:', err);
+//     } finally {
+//         await mongoose.connection.close();
+//         console.log('connection closed...');
+//     }
+// }
+//
+// createAndSaveBook();
+
+// mongoose.connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+//     .then(() => console.log('MongoDB connected...'))
+//     .catch(err => conole.err('MongoDB connection error:', err));
+
 
 /**
  String: 文字列
@@ -17,55 +64,3 @@ env.config({path: '../../.env'});
  Schema: 他のスキーマ
  */
 
-// connect(process.env.MONGO_URI);
-
-const bookSchema = new Schema({
-        title: {type: String, required: true},
-        description: {type: String, required: true},
-        rating: {type: Number, required: true, enum: [1, 2, 3, 4, 5], default: 3},
-        comment: {type: String, required: true},
-    },
-    {timestamps: true});
-
-const Book = model('Book', bookSchema);
-
-async function createBook() {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB connected.');
-
-        const book = new Book({
-            title: 'Neko san with neko san !!!!!!!!!!!!!!!!!!',
-            description: 'Explanation of neko san species',
-            comment: 'amazing.',
-            rating: 5
-        });
-
-        const savedBook = await book.save();
-        console.log(savedBook._id);
-
-    } catch (e) {
-        console.error('Error:', e);
-    }finally {
-        await mongoose.connection.close();
-    }
-}
-
-createBook();
-
-// const book = new BookModel({
-//     title: 'Neko san with neko san.',
-//     description: 'Explanation of neko san species',
-//     comment: 'amazing.',
-//     rating: 5
-// });
-
-// book.save().then((book) => console.log(book._id));
-// mongoose.connection.close();
-
-// init();
-// async function init() {
-//     const registerBook = await book.save();
-//     console.log(registerBook._id);
-//     await mongoose.connection.close();
-// }
