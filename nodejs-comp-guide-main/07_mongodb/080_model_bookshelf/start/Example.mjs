@@ -24,7 +24,7 @@ const BookModel = model('Book', bookSchema);
 
 //create a book
 async function createAndSaveBook() {
-    const book = new BookModel({
+    const newBook = new BookModel({
         title: 'Cuteness of Neko san.',
         description: 'Neko san is cute.',
         rating: 5,
@@ -33,7 +33,7 @@ async function createAndSaveBook() {
 
     try {
         //save the book
-        const savedBook = await book.save();
+        const savedBook = await newBook.save();
         console.log(savedBook._id);
     } catch (err) {
         console.error('Error saving book:', err);
