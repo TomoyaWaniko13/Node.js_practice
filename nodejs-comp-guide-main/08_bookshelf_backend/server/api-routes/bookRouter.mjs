@@ -1,49 +1,38 @@
-import express from "express";
-import BookModel from "../models/bookModel.mjs";
+import express from 'express'
+import { body } from 'express-validator'
+import {getAllBooks, getBookById, addBook, updateBook, deleteBook,} from '../controllers/bookController.mjs'
 
 const bookRouter = express.Router();
 
-bookRouter.get('/', async function (req, res) {
-    const books = await BookModel.find().sort({updatedAt: -1});
-    res.json(books);
-});
+bookRouter.get('/', getAllBooks);
 
-bookRouter.get('/:id', async function (req, res) {
-    const _id = req.params.id;
-    const foundBook = await BookModel.findOne({_id});
-    res.json(foundBook);
-});
+bookRouter.get('/:id', getBookById);
 
-bookRouter.post('/', async function (req, res) {
-    const body = req.body;
-    const newBook = new BookModel(body);
-    const savedBook = await newBook.save();
-    res.json(savedBook);
-});
+// bookRouter.post('/', body('title').notEmpty());
+bookRouter.post(
+    '/',
+    body('title').notEmpty(),
+    body('description').notEmpty(),
+    body('comment').notEmpty(),
+    body('rating').notEmpty().isInt({min: 1, max: 5}),
+    addBook
+);
 
-bookRouter.patch('/:id', async function (req, res) {
-    const {title, description, comment, rating} = req.body;
+bookRouter.patch(
+    '/:id',
+    //Including notEmpty() after optional() means that if the field is
+    // present, it cannot be an empty string or a value that is considered
+    // empty (like an empty array for other cases).
 
-    const _id = req.params.id;
-    const foundBook = await BookModel.findById({_id});
+    //If you use optional() without notEmpty(), it means the field is
+    // not required for the request
+    body('title').optional().notEmpty(),
+    body('description').optional().notEmpty(),
+    body('comment').optional().notEmpty(),
+    body('rating').optional().notEmpty().isInt({min: 1, max: 5}),
+    updateBook
+);
 
-    if (title !== undefined) {
-        foundBook.title = title;
-    }
-    if (description !== undefined) {
-        foundBook.description = description;
-    }
-    if (comment !== undefined) {
-        foundBook.rating = rating;
-    }
-    const savedBook = await foundBook.save();
-    res.json(savedBook);
-});
+bookRouter.delete('/:id', deleteBook);
 
-bookRouter.delete('/:id', async function (req, res) {
-    const _id = req.params.id;
-    const deletedBook = await BookModel.deleteOne({_id});
-    res.json({'msg': 'Delete succeeded.'});
-});
-
-export default bookRouter;
+export default bookRouter

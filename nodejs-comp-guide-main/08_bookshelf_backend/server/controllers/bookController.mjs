@@ -1,4 +1,110 @@
+import {validationResult} from "express-validator";
+import BookModel from "../models/bookModel.mjs";
 
+
+async function getAllBooks(req, res) {
+    const foundBooks = await BookModel.find().sort({updatedAt: -1});
+    res.json(foundBooks);
+}
+
+async function getBookById(req, res) {
+    const _id = req.params.id;
+    const foundBook = await BookModel.findOne({_id});
+
+    //if failed to find a book by the _id
+    if (foundBook === null) {
+        return res.status(404).json({msg: 'Page Not Found.'});
+    }
+
+    res.json(foundBook);
+}
+
+async function addBook(req, res) {
+    //Executes the validation rules that have been set up
+    // for the request object (req) and retrieves the result.
+    // The validationResult() function returns an object containing
+    // the outcome of these validations.
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        // Retrieves the validation error information
+        // in an array format. This array includes error messages for
+        // each field that failed validation, along with other relevant
+        // information.
+        const errs = errors.array();
+        //  Utilizes the response object (res) to set the status code
+        //  to 400 (Bad Request) and sends back a JSON object containing
+        //  the error information to the client. This step effectively
+        //  communicates the details of the validation errors to the client-side.
+        return res.status(400).json(errs);
+    }
+
+    const newBook = new BookModel(req.body);
+    const savedBook = await newBook.save();
+    res.json(savedBook);
+}
+
+async function updateBook(req, res) {
+    //Executes the validation rules that have been set up
+    // for the request object (req) and retrieves the result.
+    // The validationResult() function returns an object containing
+    // the outcome of these validations.
+    const errors = validationResult(req);
+
+    // Retrieves the validation error information
+    // in an array format. This array includes error messages for
+    // each field that failed validation, along with other relevant
+    // information.
+    if (!errors.isEmpty()) {
+        const errs = errors.array();
+        //  Utilizes the response object (res) to set the status code
+        //  to 400 (Bad Request) and sends back a JSON object containing
+        //  the error information to the client. This step effectively
+        //  communicates the details of the validation errors to the client-side.
+        return res.status(400).json(errs);
+    }
+
+    const {title, description, comment, rating} = req.body;
+    const _id = req.params.id;
+    const foundBook = await BookModel.findOne({_id});
+
+    //if failed to find a book by the _id
+    if (foundBook === null) {
+        return res.status(404).json({msg: 'Page Not Found.'});
+    }
+    if (title !== undefined) {
+        foundBook.title = title;
+    }
+    if (description !== undefined) {
+        foundBook.description = description;
+    }
+    if (comment !== undefined) {
+        foundBook.comment = comment;
+    }
+    if (rating !== undefined) {
+        foundBook.rating = rating;
+    }
+    const savedBook = await foundBook.save();
+    res.json(savedBook);
+}
+
+async function deleteBook(req, res) {
+    const _id = req.params.id;
+
+    //When the deletion is unsuccessful,
+    //await BookModel.deleteOne({_id}) returns
+    //{ acknowledged: true, deletedCount: 0 }
+    const {deletedCount} = await BookModel.deleteOne({_id});
+
+    //If  the deletion is unsuccessful:
+    if (deletedCount === 0) {
+        return res.status(404).json({msg: 'Target Book Not Found.'});
+    }
+
+    res.json({'msg': 'Resource deleted successfully.'});
+}
+
+export {getAllBooks, getBookById, addBook, updateBook, deleteBook};
 
 //The term "controller" comes from the Model-View-Controller (MVC)
 // architectural pattern, widely used in the development of web
