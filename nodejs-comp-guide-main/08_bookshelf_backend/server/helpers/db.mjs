@@ -9,20 +9,11 @@ mongoose.set("strictQuery", true);
 
 console.log(process.env.MONGO_URI);
 
-// await mongoose.connect(process.env.MONGO_URI);
-
-
-// mongoose.connect(process.env.MONGO_URI, {
-//     serverApi: {
-//         version: ServerApiVersion.v1,
-//         strict: true,
-//         deprecationErrors: true,
-//     }
-// });
-
 mongoose.connect(process.env.MONGO_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }
-);
+)
+    .then(() => console.log('MongoDB connected...'))
+    .catch(err => conole.err('MongoDB connection error:', err));

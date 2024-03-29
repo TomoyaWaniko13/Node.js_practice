@@ -45,6 +45,22 @@ async function createAndSaveBook() {
 
 createAndSaveBook();
 
+async function findBook() {
+    const _id = '6334634881d8ae4ba04fbc8e';
+    try {
+        const foundBook = await BookModel.findOne({_id});
+        console.log(foundBook);
+    } catch (err) {
+        console.error('Error finding book', err);
+    } finally {
+        await mongoose.connection.close();
+        console.log('connection closed...');
+    }
+}
+
+findBook();
+
+
 /**
  String: 文字列
  Number: 数値
