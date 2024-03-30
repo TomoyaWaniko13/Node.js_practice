@@ -7,7 +7,7 @@ async function getAllBooks(req, res) {
     res.json(foundBooks);
 }
 
-async function getBookById(req, res) {
+async function getOneBookById(req, res) {
     const _id = req.params.id;
     const foundBook = await BookModel.findOne({_id});
 
@@ -19,7 +19,7 @@ async function getBookById(req, res) {
     res.json(foundBook);
 }
 
-async function addBook(req, res) {
+async function addOneBook(req, res) {
     //Executes the validation rules that have been set up
     // for the request object (req) and retrieves the result.
     // The validationResult() function returns an object containing
@@ -44,7 +44,7 @@ async function addBook(req, res) {
     res.json(savedBook);
 }
 
-async function updateBook(req, res) {
+async function updateOneBook(req, res) {
     //Executes the validation rules that have been set up
     // for the request object (req) and retrieves the result.
     // The validationResult() function returns an object containing
@@ -68,7 +68,7 @@ async function updateBook(req, res) {
     const _id = req.params.id;
     const foundBook = await BookModel.findOne({_id});
 
-    //if failed to find a book by the _id
+    //if failed to find a book by the _id, the status code is 404.
     if (foundBook === null) {
         return res.status(404).json({msg: 'Page Not Found.'});
     }
@@ -88,7 +88,7 @@ async function updateBook(req, res) {
     res.json(savedBook);
 }
 
-async function deleteBook(req, res) {
+async function deleteOneBook(req, res) {
     const _id = req.params.id;
 
     //When the deletion is unsuccessful,
@@ -96,15 +96,17 @@ async function deleteBook(req, res) {
     //{ acknowledged: true, deletedCount: 0 }
     const {deletedCount} = await BookModel.deleteOne({_id});
 
-    //If  the deletion is unsuccessful:
+    //If the deletion is unsuccessful, status code is 404.
     if (deletedCount === 0) {
-        return res.status(404).json({msg: 'Target Book Not Found.'});
+        return res.status(404).json({msg: 'Target Book Not Found. This message has been sent from bookController.mjs.'});
     }
 
     res.json({'msg': 'Resource deleted successfully.'});
+
 }
 
-export {getAllBooks, getBookById, addBook, updateBook, deleteBook};
+
+export {getAllBooks, getOneBookById, addOneBook, updateOneBook, deleteOneBook};
 
 //The term "controller" comes from the Model-View-Controller (MVC)
 // architectural pattern, widely used in the development of web

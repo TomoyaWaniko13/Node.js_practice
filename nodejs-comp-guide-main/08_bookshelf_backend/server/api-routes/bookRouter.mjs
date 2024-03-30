@@ -1,12 +1,23 @@
 import express from 'express'
 import { body } from 'express-validator'
-import {getAllBooks, getBookById, addBook, updateBook, deleteBook,} from '../controllers/bookController.mjs'
+import {getAllBooks, getOneBookById, addOneBook, updateOneBook, deleteOneBook,} from '../controllers/bookController.mjs'
+import {controllerErrorWrapper} from "../helpers/controller-helpers.mjs.mjs";
 
 const bookRouter = express.Router();
 
-bookRouter.get('/', getAllBooks);
 
-bookRouter.get('/:id', getBookById);
+// bookRouter.get('/', async function (req, res,next) {
+//     try{
+//         return await getAllBooks(req, res);
+//     }catch (e) {
+//         next(e);
+//     }
+// });
+
+//the following code is equivalent to the above code.
+bookRouter.get('/', controllerErrorWrapper(getAllBooks));
+
+bookRouter.get('/:id', controllerErrorWrapper(getOneBookById));
 
 // bookRouter.post('/', body('title').notEmpty());
 bookRouter.post(
@@ -15,7 +26,8 @@ bookRouter.post(
     body('description').notEmpty(),
     body('comment').notEmpty(),
     body('rating').notEmpty().isInt({min: 1, max: 5}),
-    addBook
+    controllerErrorWrapper(addOneBook)
+
 );
 
 bookRouter.patch(
@@ -30,9 +42,9 @@ bookRouter.patch(
     body('description').optional().notEmpty(),
     body('comment').optional().notEmpty(),
     body('rating').optional().notEmpty().isInt({min: 1, max: 5}),
-    updateBook
+    controllerErrorWrapper(updateOneBook)
 );
 
-bookRouter.delete('/:id', deleteBook);
+bookRouter.delete('/:id', controllerErrorWrapper(deleteOneBook));
 
 export default bookRouter

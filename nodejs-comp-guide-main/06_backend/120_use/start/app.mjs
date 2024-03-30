@@ -21,22 +21,13 @@ app.use(express.json());
 // ミドルウェア：ルートハンドラの前後に行われる処理
 // route handler: pathとmethodに紐づくメインの処理 responseを返す。
 
-app.use('/', function (req, res, next) {
+app.use('/fjaojfaifjaiofjoajf', function (req, res, next) {
     console.log('first app.use() 1');
-
-    res.send({message: 'hello'});
-    if (true) {
-        // next();
-        next('Error occurred.');
-        return;
-    }
-    //This line doesn't get called because of the above return keyword.
-    console.log('first app.use() 2');
 });
 
-app.use('/', function (req, res, next) {
+app.use(function (req, res) {
     console.log('second app.use()');
-    next();
+    res.status(404).json({msg: 'Page Not Found.'});
 });
 
 app.get('/', function (req, res, next) {
@@ -45,19 +36,6 @@ app.get('/', function (req, res, next) {
     next();
 });
 
-app.get('/', function (req, res, next) {
-    console.log('second app.get()');
-    // res.send({message: 'hello'});
-});
-
-app.use(function (err, req, res, next) {
-    if (res.headersSent) {
-        next(err);
-        return;
-    }
-
-    res.json({err});
-});
 
 app.listen(PORT, function () {
     console.log(`Server start: http://localhost:${PORT}`);
