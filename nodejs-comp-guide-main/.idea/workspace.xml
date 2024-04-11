@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a90cb14-8891-455c-8344-ed695922a243" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/08_bookshelf_backend/server/helpers/controller-helpers.mjs.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/120_use/request.http" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/120_use/request.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_backend/120_use/start/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/06_backend/120_use/start/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/request.http" beforeDir="false" afterPath="$PROJECT_DIR$/08_bookshelf_backend/request.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/server/api-routes/bookRouter.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/08_bookshelf_backend/server/api-routes/bookRouter.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/server/app.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/08_bookshelf_backend/server/app.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/server/controllers/bookController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/08_bookshelf_backend/server/controllers/bookController.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_bookshelf_backend/server/helpers/helper.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_js_basic/100_async_await/start/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/01_js_basic/100_async_await/start/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +31,12 @@
     &quot;assignee&quot;: &quot;TomoyaWaniko13&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="b9c0a875-fa29-4105-af29-85c48cc3f557" />
-        <option name="url" value="git@github.com:TomoyaWaniko13/Node.js_practice.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:TomoyaWaniko13/Node.js_practice.git",
+    "accountId": "b9c0a875-fa29-4105-af29-85c48cc3f557"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/08_bookshelf_backend/server/app.mjs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -107,8 +98,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.11.0",
-    "javascript.nodejs.core.library.typings.version": "20.11.19",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main/05_frontend/020_webpack_basic/start",
+    "javascript.nodejs.core.library.typings.version": "20.11.30",
+    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/Node.js_practice/nodejs-comp-guide-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,7 +146,7 @@
       <recent name="$PROJECT_DIR$/04_automation/020_google_sheet/020_write" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.request | #5">
+  <component name="RunManager">
     <configuration name="request | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/08_bookshelf_backend/request.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -180,6 +171,13 @@
         <item itemvalue="HTTP Request.request | #3" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -214,15 +212,8 @@
       <workItem from="1711506113605" duration="28839000" />
       <workItem from="1711589019815" duration="34101000" />
       <workItem from="1711698931617" duration="3802000" />
-      <workItem from="1711709592247" duration="19244000" />
-    </task>
-    <task id="LOCAL-00010" summary="Update">
-      <option name="closed" value="true" />
-      <created>1708638644323</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1708638644323</updated>
+      <workItem from="1711709592247" duration="19297000" />
+      <workItem from="1712829334172" duration="4111000" />
     </task>
     <task id="LOCAL-00011" summary="Update">
       <option name="closed" value="true" />
@@ -608,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711748832776</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Update">
+      <option name="closed" value="true" />
+      <created>1711762930856</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1711762930856</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
