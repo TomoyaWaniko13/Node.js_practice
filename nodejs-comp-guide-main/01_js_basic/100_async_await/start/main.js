@@ -19,7 +19,6 @@
 // const sum = nums.reduce((totalValue, currentValue) => totalValue + currentValue, 0);
 // console.log(sum);
 
-
 // const numObject = {
 //     nums: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 //     getSum() {
@@ -74,8 +73,7 @@
 // console.log(numObject === newNumObject2);
 //
 
-
-
-
-
-
+const hoge = () => {
+    return 'hoge'
+}
+console.log(`Hello ${hoge()}!`)
